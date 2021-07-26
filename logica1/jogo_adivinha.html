@@ -1,0 +1,25 @@
+<meta charset = "UTF-8">
+<script>
+	function mostra(msg){
+
+		document.write(msg);
+	}
+	var numAleatorio = Math.round(Math.random() * 10);
+	console.log(numAleatorio);
+	var contador = 1;
+
+	while(contador <= 3){
+		var numChutado = parseInt(prompt("Digite Seu Número Pensado: "));
+
+		if(numChutado == numAleatorio){
+			mostra("Você ACERTOU O Número Pensado foi " + numAleatorio);
+			break;
+
+		} else {
+
+			mostra("Você ERROU!!! <br>");
+			
+		}
+		contador++;
+	}
+</script>

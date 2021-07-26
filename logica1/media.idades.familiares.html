@@ -1,0 +1,18 @@
+<meta charset ="UTF-8">
+<script>
+	function mostra(msg){
+
+		document.write(msg + "<br>");
+	}
+	var familiares = parseInt(prompt("Quantos Familiares? "));
+	var somaDasIdades = 0;
+	var num = 1;
+
+	while(num <= familiares) {
+
+		var idade = parseInt(prompt("Digite Sua Idade:"));
+		somaDasIdades = somaDasIdades + idade
+		num++;
+	}
+	mostra(somaDasIdades / familiares);
+</script>

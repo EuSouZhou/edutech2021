@@ -1,0 +1,65 @@
+<meta charset = "UTF-8">
+<input/>
+
+<button>Click-Me</button>
+<script>
+	function sorteia(){
+
+		return Math.round(Math.random() * 10);
+	}
+
+	function sorteiaNumero(quantidade){
+
+		var segredo = []
+		var numero = 1;
+		var achou = false
+
+		if(numeroAleatorio !== 0){
+
+		while(numero <= quantidade){
+
+			var numeroAleatorio = sorteia();
+			for(var posicao = 0; posicao < segredo.length; posicao++){
+
+				if(segredo[posicao] == numeroAleatorio){
+					achou = true
+					break;
+
+				}
+			}
+
+			if(achou == false){
+
+				segredo.push(numeroAleatorio);
+				numero++;
+			}
+		}
+	}
+		return segredo;
+	}
+	var segredo = sorteiaNumero(5);
+	console.log(segredo);
+
+	var input = document.querySelector("input");
+
+	function verifica(){
+		var achou = false
+		for(var posicao = 0; posicao < segredo.length; posicao++){
+
+		if(input.value == segredo[posicao]){
+
+			alert("Você ACERTOU!!!");
+			achou = true;
+			break;
+		}
+	}
+		if(achou == false){
+
+			alert("Você ERROU!!!");
+		}
+		input.value = "";
+		input.focus();
+	}
+	var button = document.querySelector("button");
+	button.onclick = verifica;
+</script>
